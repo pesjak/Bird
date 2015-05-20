@@ -76,17 +76,19 @@ public class Score : MonoBehaviour {
 
 	IEnumerator TaskOne()
 	{     
-		yield return new WaitForSeconds (1f);
+
 		//optimized i think
 		if (GameObject.Find ("Eagle").GetComponent<bird_movement> ().dead == true && twice == 0) {
 			PlayerPrefs.SetInt ("score", score);
 			PlayerPrefs.SetInt ("highScore", highScore);
 		} else  if(GameObject.Find ("Eagle").GetComponent<bird_movement> ().dead == true && twice == 2) {
+			yield return new WaitForSeconds (1f);
 			PlayerPrefs.SetInt ("doublepoints", 1);
 			//Application.LoadLevel ("testA");
 			Application.LoadLevel ("testA");
 
 		}else  if(GameObject.Find ("Eagle").GetComponent<bird_movement> ().dead == true && twice == 1) {
+			yield return new WaitForSeconds (1f);
 			PlayerPrefs.SetInt ("doublepoints", 0);
 			Application.LoadLevel ("testA");
 			
