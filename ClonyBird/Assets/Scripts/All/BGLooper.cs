@@ -30,7 +30,7 @@ public class BGLooper : MonoBehaviour {
 		
 		Vector3 pos = collider.transform.position;
 		
-		pos.x += 33.7863f;
+		pos.x += 15f;  ///spremeni 33.7863   13.44
 
 		if(collider.tag == "Tree") {
 

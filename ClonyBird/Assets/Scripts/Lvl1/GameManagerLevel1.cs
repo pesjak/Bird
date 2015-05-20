@@ -17,7 +17,6 @@ public class GameManagerLevel1 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
  if (GameObject.Find ("Eagle").GetComponent<SensorAI> ().dead == true) {
-			
 			anim.SetTrigger ("GameOver");
 			
 			//			restartTimer += Time.deltaTime;

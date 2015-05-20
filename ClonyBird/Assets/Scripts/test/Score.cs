@@ -14,7 +14,6 @@ public class Score : MonoBehaviour {
 
 	public static void AddPoint() {
 		if(instance.bird.dead)
-
 			return;
 
 
@@ -43,9 +42,9 @@ public class Score : MonoBehaviour {
 
 		instance = this;
 		GameObject player_go = GameObject.FindGameObjectWithTag("Player");
-		if(player_go == null) {
-			//Debug.LogError("Could not find an object with tag 'Player'.");
-		}
+//		if(player_go == null) {
+//			//Debug.LogError("Could not find an object with tag 'Player'.");
+//		}
 		
 		bird = player_go.GetComponent<bird_movement>();
 
@@ -63,25 +62,36 @@ public class Score : MonoBehaviour {
 	}
 	
 	void Update () {
-		if (GameObject.Find ("Eagle").GetComponent<bird_movement> ().dead == true && twice == 0) {
-						PlayerPrefs.SetInt ("score", score);
-						PlayerPrefs.SetInt ("highScore", highScore);
-		} else  if(GameObject.Find ("Eagle").GetComponent<bird_movement> ().dead == true && twice != 0) {
-
-			StartCoroutine(TaskOne());
-		}
-
+//		if (GameObject.Find ("Eagle").GetComponent<bird_movement> ().dead == true && twice == 0) {
+//						PlayerPrefs.SetInt ("score", score);
+//						PlayerPrefs.SetInt ("highScore", highScore);
+//		} else  if(GameObject.Find ("Eagle").GetComponent<bird_movement> ().dead == true && twice != 0) {
+//
+//			StartCoroutine(TaskOne());
+//		}
+		StartCoroutine(TaskOne());
 						GetComponent<Text> ().text = "Score: " + score + "\nHigh Score: " + highScore;
 				
 	}
 
 	IEnumerator TaskOne()
-	{           
-//		while (true) {
-						yield return new WaitForSeconds (1f);
-						PlayerPrefs.SetInt ("doublepoints", 0);
-						Application.LoadLevel ("test");
-			//	}
+	{     
+
+		//optimized i think
+		if (GameObject.Find ("Eagle").GetComponent<bird_movement> ().dead == true && twice == 0) {
+			PlayerPrefs.SetInt ("score", score);
+			PlayerPrefs.SetInt ("highScore", highScore);
+		} else  if(GameObject.Find ("Eagle").GetComponent<bird_movement> ().dead == true && twice != 0) {
+			yield return new WaitForSeconds (1f);
+			PlayerPrefs.SetInt ("doublepoints", 0);
+			Application.LoadLevel ("testA");
+		
+		}
+
+		///before
+//		yield return new WaitForSeconds (1f);
+//		PlayerPrefs.SetInt ("doublepoints", 0);
+//		Application.LoadLevel ("testA");
 	}
 
 	

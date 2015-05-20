@@ -1,10 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\test\GameOverComment.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\All\BGLooper.cs">
     <Files>
-      <File FileName="Assets\Scripts\test\GameOverComment.cs" Line="55" Column="71" />
-      <File FileName="Assets\Scripts\All\ChangeScene.cs" Line="1" Column="1" />
-      <File FileName="Assets\UnityAdsHelper.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\All\BGLooper.cs" Line="33" Column="45" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
