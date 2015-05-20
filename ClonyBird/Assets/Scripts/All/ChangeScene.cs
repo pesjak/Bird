@@ -10,14 +10,17 @@ public class ChangeScene : MonoBehaviour {
 	public void ChangeToScene(int SceneToChangeTo)
 	{
 		GameObject retry = GameObject.Find ("RetryWithAds");
-		
-		if (retry.GetComponent<Button> ().interactable != false) {
-						PlayerPrefs.SetInt ("doublepoints", 0);
+
+		int twice = PlayerPrefs.GetInt ("doublepoints", 0);
+
+		//retry.GetComponent<Button> ().interactable != false
+		if (twice > 0) {
+						//	PlayerPrefs.SetInt ("doublepoints", 0);
 						Application.LoadLevel (SceneToChangeTo);
-				
-				} else {
-			Application.LoadLevel (SceneToChangeTo);
-		}
+				}
+//				 else {
+//			Application.LoadLevel (SceneToChangeTo);
+
 	}
 
 	public void ClickForAd()

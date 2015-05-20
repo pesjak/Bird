@@ -18,10 +18,19 @@ public class CheckDouble : MonoBehaviour {
 
 
 		if (twice == 0) {
+			always.SetActive(false);
+			doubleON.SetActive(false);
 			//doubleON = GameObject.Find ("DoublePointsText");
-				} else if (twice != 0) {
+				} 
+		else if (twice == 1) {
 			always.SetActive(true);
+			doubleON.SetActive(false);
 
+		}else if (twice == 2) {
+			always.SetActive(true);
+			doubleON.SetActive(true);
+
+			
 		}
 
 

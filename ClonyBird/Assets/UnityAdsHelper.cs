@@ -160,7 +160,7 @@ public class UnityAdsHelper : MonoBehaviour
 			//Debug.Log("The ad was successfully shown.");
 			if (!object.ReferenceEquals(_handleFinished,null)) _handleFinished();
 			{
-				PlayerPrefs.SetInt ("doublepoints", 1);
+				PlayerPrefs.SetInt ("doublepoints", 2);
 				GameObject retry = GameObject.Find ("RetryWithAds");
 				retry.GetComponent<Button> ().interactable = false;
 				GameObject goretry = GameObject.Find ("ViewAdText");
@@ -172,7 +172,7 @@ public class UnityAdsHelper : MonoBehaviour
 			if (!object.ReferenceEquals(_handleSkipped,null)) _handleSkipped();
 			{
 				
-				PlayerPrefs.SetInt ("doublepoints", 1);
+				PlayerPrefs.SetInt ("doublepoints", 2);
 				GameObject retry = GameObject.Find ("RetryWithAds");
 				retry.GetComponent<Button> ().interactable = false;
 				GameObject goretry = GameObject.Find ("ViewAdText");

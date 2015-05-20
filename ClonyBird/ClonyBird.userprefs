@@ -1,8 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\All\BGLooper.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\All\ChangeScene.cs">
     <Files>
-      <File FileName="Assets\Scripts\All\BGLooper.cs" Line="33" Column="45" />
+      <File FileName="Assets\Scripts\test\Score.cs" Line="88" Column="4" />
+      <File FileName="Assets\Scripts\test\CheckDouble.cs" Line="13" Column="2" />
+      <File FileName="Assets\Scripts\All\ChangeScene.cs" Line="20" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
