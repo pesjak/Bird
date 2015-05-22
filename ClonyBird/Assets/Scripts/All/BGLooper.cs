@@ -29,14 +29,22 @@ public class BGLooper : MonoBehaviour {
 //		float widthOfBGObject = ((BoxCollider2D)collider).size.x;
 		
 		Vector3 pos = collider.transform.position;
-		
+		Vector3 pos1 = collider.transform.position;
+
 		pos.x += 15f;  ///spremeni 33.7863   13.44
+		pos1.x += 25.3f;
 
 		if(collider.tag == "Tree") {
+		
+			collider.transform.position = pos;
 
-			pos.y = Random.Range(treeMin, treeMax);
 		}
-		collider.transform.position = pos;
+
+		if(collider.tag == "Background") {
+			
+			collider.transform.position = pos1;
+			
+		}
 
 
 
